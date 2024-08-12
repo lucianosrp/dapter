@@ -50,6 +50,12 @@ df = pd.concat(dfs)
 ```
 ## 🧰 Installation
 
+Using pip:
+
+```
+pip install dapter
+```
+
 ## 🔄 Infinite DataFrame compatibility
 
 Dapter uses [narwhals](https://narwhals-dev.github.io/narwhals/) in the background so it can accepts any (See supported[^1]) kind of DataFrame libraries.

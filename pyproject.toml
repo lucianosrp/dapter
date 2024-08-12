@@ -43,7 +43,7 @@ docstring-code-format = true
 ignore = ["F401"]
 
 [tool.hatch.build]
-exclude = ["/.*", "/docs", "/tests"]
+exclude = ["/.*", "/docs", "/tests", "/examples"]
 
 [tool.hatch.metadata]
 allow-direct-references = true
