@@ -1,0 +1,62 @@
+[project]
+name = "dapter"
+version = "0.1.0"
+description = "Tool to adapt multiple dataframes to one unique format"
+authors = [
+    { name = "Luciano Scarpulla", email = "66913960+lucianosrp@users.noreply.github.com " },
+]
+dependencies = ["narwhals>=1.2.0"]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+
+[project.optional-dependencies]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "polars>=1.1.0",
+    "ipython>=8.26.0",
+    "pydantic>=2.8.2",
+    "pandas>=2.2.2",
+    "pytest>=8.2.2",
+    "mypy>=1.10.1",
+    "isort>=5.13.2",
+    "pytest-cov>=5.0.0",
+    "ipykernel>=6.29.5",
+    "mkdocs-material>=9.5.9",
+    "mkdocs-markdownextradata-plugin>=0.2.5",
+    "markdown-exec[ansi]>=1.9.3",
+    "tabulate>=0.9.0",
+    "pymdown-extensions>=10.9",
+    "pyarrow>=17.0.0",
+]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint]
+ignore = ["F401"]
+
+[tool.hatch.build]
+exclude = ["/.*", "/docs", "/tests"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["dapter"]
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["narwhals.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "--cov=dapter --cov-fail-under=100"

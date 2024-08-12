@@ -1,0 +1,52 @@
+Transaction ID,Date,Customer ID,Amount,Currency,Payment Method,Status,Description
+1,2024-08-01,1001,150.75,USD,Credit Card,Completed,Purchase at Store A
+2,2024-08-01,1002,85.50,USD,Debit Card,Completed,Online Order #5678
+3,2024-08-02,1003,47.99,EUR,PayPal,Pending,Subscription Renewal
+4,2024-08-02,1004,240.00,GBP,Wire Transfer,Completed,Invoice #12345
+5,2024-08-03,1005,20.00,USD,Cash,Failed,Store B Payment
+6,2024-08-03,1001,99.99,USD,Credit Card,Completed,Electronics Purchase
+7,2024-08-03,1006,300.25,USD,Debit Card,Completed,Flight Booking
+8,2024-08-04,1007,10.00,USD,Cash,Completed,Coffee Shop
+9,2024-08-04,1008,75.00,EUR,Credit Card,Pending,Concert Ticket
+10,2024-08-04,1009,150.00,USD,PayPal,Completed,Online Course
+11,2024-08-05,1010,200.00,USD,Credit Card,Completed,Hotel Booking
+12,2024-08-05,1011,59.99,USD,Debit Card,Failed,Restaurant Bill
+13,2024-08-05,1012,120.50,GBP,Wire Transfer,Completed,Consulting Fee
+14,2024-08-06,1013,35.00,USD,Cash,Completed,Grocery Shopping
+15,2024-08-06,1002,250.00,USD,Credit Card,Pending,Furniture Purchase
+16,2024-08-06,1014,95.75,EUR,PayPal,Completed,Clothing Store
+17,2024-08-07,1015,15.00,USD,Debit Card,Completed,Gas Station
+18,2024-08-07,1016,100.00,USD,Credit Card,Completed,Movie Theater
+19,2024-08-07,1003,45.00,GBP,Wire Transfer,Pending,Bookstore
+20,2024-08-08,1017,200.00,USD,Credit Card,Completed,Online Electronics
+21,2024-08-08,1018,30.50,USD,PayPal,Failed,Charity Donation
+22,2024-08-08,1019,75.00,EUR,Debit Card,Completed,Sporting Goods
+23,2024-08-08,1020,50.00,USD,Cash,Completed,Pharmacy Purchase
+24,2024-08-09,1004,125.00,USD,Credit Card,Completed,Restaurant Bill
+25,2024-08-09,1021,90.00,USD,Debit Card,Pending,Subscription Payment
+26,2024-08-09,1022,65.00,GBP,Wire Transfer,Completed,Online Learning
+27,2024-08-10,1005,40.00,USD,Cash,Completed,Gym Membership
+28,2024-08-10,1023,150.00,EUR,Credit Card,Failed,Travel Booking
+29,2024-08-10,1024,55.00,USD,PayPal,Completed,Gift Shop
+30,2024-08-10,1010,80.00,USD,Debit Card,Completed,Supermarket
+31,2024-08-11,1025,220.00,USD,Credit Card,Completed,Furniture Store
+32,2024-08-11,1008,60.00,EUR,Debit Card,Pending,Music Festival
+33,2024-08-11,1026,130.00,GBP,Wire Transfer,Completed,Professional Services
+34,2024-08-12,1027,25.00,USD,Cash,Completed,Cafe
+35,2024-08-12,1012,100.00,USD,Credit Card,Completed,Online Shopping
+36,2024-08-12,1028,45.00,USD,PayPal,Failed,Game Store
+37,2024-08-13,1029,80.00,USD,Debit Card,Completed,Pet Supplies
+38,2024-08-13,1006,55.50,USD,Credit Card,Completed,Hardware Store
+39,2024-08-13,1030,150.00,GBP,Wire Transfer,Pending,Car Rental
+40,2024-08-14,1007,30.00,USD,Cash,Completed,Bookstore
+41,2024-08-14,1031,125.00,USD,Credit Card,Completed,Sports Event
+42,2024-08-14,1032,70.00,EUR,PayPal,Failed,Online Auction
+43,2024-08-14,1033,90.00,USD,Debit Card,Completed,Home Decor
+44,2024-08-15,1011,200.00,USD,Credit Card,Completed,Hotel Reservation
+45,2024-08-15,1001,150.00,USD,PayPal,Pending,Car Service
+46,2024-08-15,1034,50.00,GBP,Wire Transfer,Completed,Gift Purchase
+47,2024-08-16,1009,40.00,USD,Cash,Completed,Local Market
+48,2024-08-16,1035,75.00,USD,Credit Card,Failed,Cinema
+49,2024-08-16,1036,30.00,EUR,PayPal,Completed,Streaming Service
+50,2024-08-16,1037,60.00,USD,Debit Card,Completed,Restaurant
+
