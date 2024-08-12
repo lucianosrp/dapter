@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dapter-light.svg">
-  <img alt="Text changing depending on mode. Light: 'So light!' Dark: 'So dark!'" src="docs/assets/dapter-dark.svg"  width="300">
+  <img src="docs/assets/dapter-dark.svg"  width="300">
 </picture>
 
 
@@ -8,7 +8,7 @@
 
 Dapter is a convenient tool that helps working with multiple data sources. It allows you to easily rename column names and transform your data in one go.
 
-With Dapter, you can store a series  of instruction for your data cleaning routines into custom objects. You can then reuse the object to any DataFrames at any part of your code. See the step-by-step example below.
+With Dapter, you can store a series of instructions for your data cleaning routines into custom objects. You can then reuse the object to any DataFrames at any part of your code. See the step-by-step example below.
 
 
 ## 📝 Example
@@ -52,9 +52,11 @@ df = pd.concat(dfs)
 
 ## 🔄 Infinite DataFrame compatibility
 
-Dapter uses [narwhals](https://narwhals-dev.github.io/narwhals/) in the background so it can accepts any[^1] kind of DataFrame libraries.
+Dapter uses [narwhals](https://narwhals-dev.github.io/narwhals/) in the background so it can accepts any (See supported[^1]) kind of DataFrame libraries.
 
-Which means you can define Polars `Series` and `Expr` transformations for pandas' `Series` and vice versa! 
+Which means you can define Polars `Series` and `Expr` transformations for pandas' `Series` and vice-versa! 
+
+You can also feed any DataFrame to the `apply` method.
 
 
 [^1]:  cuDF, Modin, pandas, Polars, PyArrow, Dask, Ibis, Vaex
@@ -107,8 +109,8 @@ def clean_str(col:pd.Series) -> pd.Series:
 class TransactionMapper(BaseMapper):
     transaction_date = accepts("transaction_date", "Date","DATE")
     vendor_name = accepts_anycases()    
-    amount_eur = (accepts("Amount USD", "amount_usd","USD"), convert_to_eur)
-    category = (accepts("Category", "category","CAT"), clean_str)
+    amount_eur = accepts("Amount USD", "amount_usd","USD"), convert_to_eur
+    category = accepts("Category", "category","CAT"), clean_str
 
 mapper = TransactionMapper()
 
