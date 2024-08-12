@@ -1,5 +1,5 @@
 from __future__ import annotations
-from abc import ABC
+
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from typing import Any, Self, Type, TypeVar, get_type_hints
@@ -11,7 +11,7 @@ from dapter.column_names import AnyCaseNames, BaseNameModifier, NameAccepts, acc
 
 
 @dataclass
-class BaseMapper(ABC):
+class BaseMapper:
     _expr_modifiers: dict[str, list[Callable[..., nw.Expr]]] | None = None
     _expr_name_modifiers: dict[str, Any] | None = None
     _cols: list[nw.Expr] | None = None
