@@ -1,0 +1,32 @@
+name: PyTest
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  pytest-38:
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        os: [windows-latest, ubuntu-latest]
+
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install uv (Unix)
+        if: runner.os != 'Windows'
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+      - name: Install uv (Windows)
+        if: runner.os == 'Windows'
+        run: powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+      - name: install-reqs
+        run: uv pip install  -r requirements-dev.lock --system
+      - name: show-deps
+        run: uv pip freeze
+      - name: Run pytest
+        run: pytest
