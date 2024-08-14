@@ -1,6 +1,6 @@
 [project]
 name = "dapter"
-version = "0.1.0"
+version = "0.1.1"
 description = "Tool to adapt multiple dataframes to one unique format"
 authors = [
     { name = "Luciano Scarpulla", email = "66913960+lucianosrp@users.noreply.github.com " },
@@ -8,7 +8,14 @@ authors = [
 dependencies = ["narwhals>=1.2.0"]
 readme = "README.md"
 requires-python = ">= 3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
 
+[project.urls]
+Homepage = "https://github.com/lucianosrp/dapter"
 
 [project.optional-dependencies]
 
