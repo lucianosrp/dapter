@@ -28,15 +28,9 @@ managed = true
 universal = true
 dev-dependencies = [
     "polars>=1.1.0",
-    "ipython>=8.26.0",
-    "pydantic>=2.8.2",
     "pandas>=2.2.2",
     "pytest>=8.2.2",
-    "mypy>=1.10.1",
-    "isort>=5.13.2",
     "pytest-cov>=5.0.0",
-    "ipykernel>=6.29.5",
-    "pyarrow>=17.0.0",
 ]
 
 [tool.ruff.format]
