@@ -25,6 +25,7 @@ build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
+universal = true
 dev-dependencies = [
     "polars>=1.1.0",
     "ipython>=8.26.0",
@@ -35,11 +36,6 @@ dev-dependencies = [
     "isort>=5.13.2",
     "pytest-cov>=5.0.0",
     "ipykernel>=6.29.5",
-    "mkdocs-material>=9.5.9",
-    "mkdocs-markdownextradata-plugin>=0.2.5",
-    "markdown-exec[ansi]>=1.9.3",
-    "tabulate>=0.9.0",
-    "pymdown-extensions>=10.9",
     "pyarrow>=17.0.0",
 ]
 

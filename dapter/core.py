@@ -7,7 +7,12 @@ from typing import Any, Self, Type, TypeVar, get_type_hints
 import narwhals.stable.v1 as nw
 from narwhals.typing import Frame, IntoDataFrame, IntoFrame
 
-from dapter.column_names import AnyCaseNames, BaseNameModifier, NameAccepts, accepts
+from dapter.column_names import (
+    AnyCaseNames,
+    BaseNameModifier,
+    NameAccepts,
+    accepts,
+)
 
 
 @dataclass
