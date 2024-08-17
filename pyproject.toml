@@ -5,7 +5,7 @@ description = "Tool to adapt multiple dataframes to one unique format"
 authors = [
     { name = "Luciano Scarpulla", email = "66913960+lucianosrp@users.noreply.github.com " },
 ]
-dependencies = ["narwhals>=1.2.0"]
+dependencies = ["narwhals"]
 readme = "README.md"
 requires-python = ">= 3.8"
 classifiers = [

@@ -25,7 +25,9 @@ jobs:
         if: runner.os == 'Windows'
         run: powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
       - name: install-reqs
-        run: uv pip install -r requirements-dev.txt --system
+        run: |
+          uv pip install . --system
+          uv pip install -r requirements-dev.txt --system
       - name: show-deps
         run: uv pip freeze
       - name: Run pytest
