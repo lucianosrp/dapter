@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
-from typing import Any, Self, Type, TypeVar, get_type_hints
+from typing import TYPE_CHECKING, Any, Type, TypeVar
 
 import narwhals.stable.v1 as nw
 from narwhals.typing import Frame, IntoDataFrame, IntoFrame
@@ -13,6 +13,9 @@ from dapter.column_names import (
     NameAccepts,
     accepts,
 )
+
+if TYPE_CHECKING:  # pragma: no cover
+    from typing_extensions import Self
 
 
 @dataclass

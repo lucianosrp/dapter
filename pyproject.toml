@@ -27,10 +27,11 @@ build-backend = "hatchling.build"
 managed = true
 universal = true
 dev-dependencies = [
-    "polars>=1.1.0",
-    "pandas>=2.2.2",
-    "pytest>=8.2.2",
-    "pytest-cov>=5.0.0",
+    "polars",
+    "pandas",
+    "pytest",
+    "pytest-cov",
+    "typing-extensions",
 ]
 
 [tool.ruff.format]
