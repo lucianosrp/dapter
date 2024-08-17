@@ -1,0 +1,5 @@
+narwhals
+polars
+pandas
+pytest
+pytest-cov

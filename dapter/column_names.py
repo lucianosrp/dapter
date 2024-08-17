@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from abc import ABC, abstractmethod
 from collections.abc import Iterable
 from typing import TypeVar
@@ -11,7 +13,7 @@ class BaseNameModifier(ABC):
     def get_names(self) -> list[str]: ...
 
 
-def assert_snake_case(s: str) -> bool:
+def assert_snake_case(s: str) -> None:
     splitted_s = s.split("_")
     assert len(splitted_s) > 0
     for substr in splitted_s:
@@ -42,7 +44,11 @@ class AnyCaseNames(BaseNameModifier):
     def get_names(self) -> list[str]:
         new_names = []
         for name in self.names:
-            for func in (to_camel_case, to_spaced_words, to_screaming_snake_case):
+            for func in (
+                to_camel_case,
+                to_spaced_words,
+                to_screaming_snake_case,
+            ):
                 new_names.append(func(name))
         return new_names
 

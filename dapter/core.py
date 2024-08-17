@@ -1,17 +1,25 @@
 from __future__ import annotations
-from abc import ABC
+
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
-from typing import Any, Self, Type, TypeVar, get_type_hints
+from typing import TYPE_CHECKING, Any, Type, TypeVar
 
 import narwhals.stable.v1 as nw
 from narwhals.typing import Frame, IntoDataFrame, IntoFrame
 
-from dapter.column_names import AnyCaseNames, BaseNameModifier, NameAccepts, accepts
+from dapter.column_names import (
+    AnyCaseNames,
+    BaseNameModifier,
+    NameAccepts,
+    accepts,
+)
+
+if TYPE_CHECKING:  # pragma: no cover
+    from typing_extensions import Self
 
 
 @dataclass
-class BaseMapper(ABC):
+class BaseMapper:
     _expr_modifiers: dict[str, list[Callable[..., nw.Expr]]] | None = None
     _expr_name_modifiers: dict[str, Any] | None = None
     _cols: list[nw.Expr] | None = None
